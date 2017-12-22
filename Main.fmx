@@ -1,0 +1,88 @@
+object Form42: TForm42
+  Left = 0
+  Top = 0
+  Caption = 'Form42'
+  ClientHeight = 451
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 3
+  object Connect: TButton
+    Position.X = 40.000000000000000000
+    Position.Y = 24.000000000000000000
+    Size.Width = 137.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Text = 'Connect'
+    OnClick = ConnectClick
+  end
+  object Edit1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 1
+    Text = 'Yamasho'
+    Position.X = 48.000000000000000000
+    Position.Y = 88.000000000000000000
+    Size.Width = 449.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Send: TButton
+    Position.X = 232.000000000000000000
+    Position.Y = 144.000000000000000000
+    Size.Width = 145.000000000000000000
+    Size.Height = 49.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Text = 'Send'
+    OnClick = SendClick
+  end
+  object ButtonA: TCircle
+    Position.X = 96.000000000000000000
+    Position.Y = 224.000000000000000000
+    Size.Width = 81.000000000000000000
+    Size.Height = 81.000000000000000000
+    Size.PlatformDefault = False
+    object BTLableA: TLabel
+      Position.X = 30.000000000000000000
+      Position.Y = 25.000000000000000000
+      Size.Width = 33.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'A'
+    end
+  end
+  object Label1: TLabel
+    Position.X = 256.000000000000000000
+    Position.Y = 16.000000000000000000
+    Size.Width = 273.000000000000000000
+    Size.Height = 57.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Label1'
+  end
+  object ButtonB: TCircle
+    Position.X = 424.000000000000000000
+    Position.Y = 216.000000000000000000
+    Size.Width = 81.000000000000000000
+    Size.Height = 81.000000000000000000
+    Size.PlatformDefault = False
+    object BtLabelB: TLabel
+      Position.X = 30.000000000000000000
+      Position.Y = 25.000000000000000000
+      Size.Width = 33.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'B'
+    end
+  end
+  object BluetoothLE1: TBluetoothLE
+    Enabled = False
+    OnCharacteristicRead = BluetoothLE1CharacteristicRead
+    OnEndDiscoverDevices = BluetoothLE1EndDiscoverDevices
+    OnEndDiscoverServices = BluetoothLE1EndDiscoverServices
+    Left = 304
+    Top = 208
+  end
+end
